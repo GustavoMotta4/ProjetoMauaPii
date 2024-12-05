@@ -311,7 +311,7 @@ a.learn-more:hover {
 }
 
 
-/* Estilo para o grid de cartões */
+/* Estilo para o grid de cartões 
 .grid {
     display: flex;
     gap: 20px;
@@ -344,7 +344,7 @@ a.learn-more:hover {
     border-radius: 10px;
     margin-bottom: 0;
 }
-
+*/
 
 /* Responsividade para telas médias */
 @media (max-width: 768px) {
@@ -545,29 +545,98 @@ a.learn-more:hover {
 }
 
 
-/* Temas Anuais*/
+/* Estilização da seção Temas Anuais */
 .temas-anual-section {
-    padding: 40px 20px; /* Adiciona um espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-    margin: 20px; /* Margem ao redor da seção */
-    padding: 20px; /* Espaçamento interno */
-    background-color:   #ffffff; /* Cor de fundo */
-    border-radius: 10px; /* Bordas arredondadas */
-    color: #333; /* Cor do texto */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .temas-anual-section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: red; /* Cor do título */
-    font-family: 'Arial', sans-serif; /* Define a fonte do título */
+    color: red;
+    font-family: 'Arial', sans-serif;
 }
 
 .temas-anual-section p {
     font-size: 1.2em;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+
+/* Estilização do Carrossel */
+.carrossel-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 100%;
+}
+
+.carrossel {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.carrossel .item {
+    text-align: center;
+    flex: 1 0 21%; /* Faz com que os itens ocupem aproximadamente 21% da largura */
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Ajuste para as 3 últimas imagens */
+.carrossel .item:nth-last-child(-n+3) {
+    margin-right: 5px; /* Diminui a margem direita das últimas 3 imagens */
+}
+
+.descricao {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.carrossel .item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* Estilização do Título - Recreatur */
+.carrossel-section h3 {
+    font-size: 2.0em; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto mais espesso */
+    color: #ff0000; /* Cor vibrante (tom de laranja/vermelho) */
+    text-transform: uppercase; /* Deixa o título em letras maiúsculas */
+    letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+    text-shadow: 2px 2px 4px rgb(253, 0, 0); /* Sombra suave no texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-family: 'Arial', sans-serif; /* Define a fonte */
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estilização do Título - Recreatops */
+.carrossel-section h3:last-of-type {
+    font-size: 2.0em; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto mais espesso */
+    color: #ff0101; /* Cor vibrante (verde) */
+    text-transform: uppercase; /* Deixa o título em letras maiúsculas */
+    letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave no texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-family: 'Arial', sans-serif; /* Define a fonte */
+    text-align: center; /* Centraliza o título */
 }
 
 /* Responsividade */
@@ -682,13 +751,101 @@ a.learn-more:hover {
 }
 
 
-/*Carrossel de fotos*/
-.circle {
-    width: 500px; /* Tamanho do círculo */
-    height: 500px; /* Tamanho do círculo */
-    background-color: red; /* Cor do círculo */
-    border-radius: 50%; /* Forma circular */
-    margin: 40px auto; /* Espaçamento acima e abaixo */
-    float: right; /* Mover o círculo para a direita */
-    margin-right: 80px; /* Aumenta o valor para mover mais para a esquerda */
+
+
+/* Estilos para o modo de contraste alto */
+body.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+nav.high-contrast,
+footer.high-contrast {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Botão fixo de acessibilidade */
+#accessibility-button {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0;
+    /* Retângulo sem bordas arredondadas */
+    padding: 10px 20px;
+    /* Ajustado para dar um formato retangular */
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Alteração do botão para contraste alto */
+body.high-contrast #accessibility-button {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+#accessibility-button:hover {
+    background-color: #0056b3;
+}
+
+/* Menu de acessibilidade */
+#accessibility-menu {
+    display: none;
+    position: fixed;
+    top: calc(50% + 40px);
+    left: 20px;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+/* Estilos dos botões dentro do menu de acessibilidade */
+.accessibility-button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.accessibility-button:hover {
+    background-color: #0056b3;
+}
+
+/* Mensagens de erro em vermelho */
+.required {
+    color: red;
+    margin-left: 5px;
+}
+
+.error {
+    color: red;
+    display: none;
+    font-size: 0.9em;
+}
+
+/* Ajuste de fonte para o conteúdo da página */
+.content {
+    font-size: 1em;
+}
+
+/* Não afeta o botão de acessibilidade */
+#accessibility-button,
+#accessibility-menu {
+    font-size: 16px !important;
 }
