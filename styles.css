@@ -1,4 +1,7 @@
+*
 * {
+    font-family: Arial, sans-serif;
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -613,6 +616,24 @@ a.learn-more:hover {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .carrossel .item {
+        flex: 1 0 100%; /* Faz com que os itens ocupem 100% da largura */
+        max-width: 100%; /* Assegura que as imagens ocupem toda a largura disponível */
+    }
+}
+
+@media (max-width: 480px) {
+    .carrossel .item {
+        flex: 1 0 100%; /* Garante que as imagens fiquem em 100% da largura da tela */
+    }
+
+    .descricao {
+        font-size: 0.9em; /* Reduz o tamanho da fonte da descrição em telas muito pequenas */
+    }
+}
 /* Estilização do Título - Recreatur */
 .carrossel-section h3 {
     font-size: 2.0em; /* Aumenta o tamanho da fonte */
@@ -848,4 +869,5 @@ body.high-contrast #accessibility-button {
 #accessibility-button,
 #accessibility-menu {
     font-size: 16px !important;
+}
 }
